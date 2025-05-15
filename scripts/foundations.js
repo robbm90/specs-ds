@@ -1,6 +1,6 @@
-// Conteúdo dos Cards
+// 1. Array para exportar os dados
 
-const foundationCards = [
+export const foundationCards = [
   {
     title: "Color",
     description: "The palette and semantic tokens for color usage.",
@@ -53,7 +53,7 @@ const foundationCards = [
   },
 ];
 
-// Função para renderizar os cards
+// 2. Função que gera os cards
 
 export function renderFoundations() {
   const container = document.getElementById("foundation-cards");
@@ -69,9 +69,53 @@ export function renderFoundations() {
       <div class="card-content">
         <h2>${title}</h2>
         <p>${description}</p>
-        <a href="${link}" class="ds-link-button" data-subsection="${link}" >View</a>
+        <a href="${link}" class="ds-link-button" data-subsection="${link}">View</a>
       </div>
     `;
     container.appendChild(card);
   });
+}
+
+// 3. Exporta a função de navegação dinâmica de Avançar / Voltar
+
+export function renderSectionNavigation(currentLink) {
+  const index = foundationCards.findIndex((item) => item.link === currentLink);
+  if (index === -1) return;
+
+  const prev = foundationCards[index - 1];
+  const next = foundationCards[index + 1];
+
+  const nav = document.createElement("div");
+  nav.className = "section-nav";
+
+  // Botão anterior
+  if (prev) {
+    const a = document.createElement("a");
+    a.className = "prev";
+    a.textContent = `← ${prev.title}`;
+    a.setAttribute("data-subsection", prev.link);
+    a.href = "#";
+    nav.appendChild(a);
+  } else {
+    // Se for o primeiro item, mostra botão de voltar para a lista
+    const back = document.createElement("a");
+    back.className = "prev";
+    back.textContent = "← Back to Foundations";
+    back.setAttribute("data-section", "foundations");
+    back.href = "#";
+    nav.appendChild(back);
+  }
+
+  // Botão próximo (se houver)
+  if (next) {
+    const a = document.createElement("a");
+    a.className = "next";
+    a.textContent = `${next.title} →`;
+    a.setAttribute("data-subsection", next.link);
+    a.href = "#";
+    nav.appendChild(a);
+  }
+
+  const container = document.getElementById("main-content");
+  container.appendChild(nav);
 }

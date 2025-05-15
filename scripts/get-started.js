@@ -5,29 +5,29 @@ const startContent = [
     title: "Foundations",
     description:
       "The core principles that define our visual and interaction language — including color, typography, spacing, and more",
-    link: "overview/foundations.html",
+    link: "foundations.html",
   },
   {
     title: "Components",
     description:
       "Reusable building blocks that accelerate design and development while ensuring consistency and quality",
-    link: "overview/components.html",
+    link: "/components.html",
   },
   {
     title: "Patterns",
     description: "Font families, sizes, and style guidelines",
-    link: "overview/patterns.html",
+    link: "/patterns.html",
   },
   {
     title: "Processes",
     description: "Consistent spacing scale for layout and components",
-    link: "overview/processes.html",
+    link: "/processes.html",
   },
   {
     title: "System Status",
     description:
       "Stay informed about what’s live, what’s evolving, and what’s coming next in the Design System",
-    link: "overview/system-status.html",
+    link: "/system-status.html",
   },
 ];
 

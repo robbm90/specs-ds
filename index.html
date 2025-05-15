@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Specs DS</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="/themes/zen.css" id="ds-theme-link" /> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <script type="module" src="/scripts/content-loader.js"></script>
+    <script src="/scripts/ds-theme-engine.js" defer></script>
   </head>
   <body>
     <div class="app-container">
@@ -43,13 +45,13 @@
 
           <div class="badge">V1.1</div>
         </div>
-        <!-- Seletor de Space -->
-        <div class="space-selector">
-          <label for="space">Select Space:</label>
-          <select id="space">
-            <option>Brand A</option>
-            <option>Brand B</option>
-            <option>Brand C</option>
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+          <label for="theme">Select Theme:</label>
+          <select class="nav-link" id="themeSelector">
+            <option value="zen">Brand Zen</option>
+            <option value="acme">Brand Acme</option>
+            <option value="krypto">Brand Krypto</option>
           </select>
         </div>
 
@@ -67,14 +69,14 @@
                 Components
               </a>
               <ul class="submenu">
-                <li><a href="#">Button</a></li>
-                <li><a href="#">Card</a></li>
-                <li><a href="#">Chip</a></li>
-                <li><a href="#">Counter</a></li>
-                <li><a href="#">Dialog</a></li>
-                <li><a href="#">Input</a></li>
-                <li><a href="#">Modal</a></li>
-                <li><a href="#">Toast</a></li>
+                <li><a class="nav-link" href="#">Button</a></li>
+                <li><a class="nav-link" href="#">Card</a></li>
+                <li><a class="nav-link" href="#">Chip</a></li>
+                <li><a class="nav-link" href="#">Counter</a></li>
+                <li><a class="nav-link" href="#">Dialog</a></li>
+                <li><a class="nav-link" href="#">Input</a></li>
+                <li><a class="nav-link" href="#">Modal</a></li>
+                <li><a class="nav-link" href="#">Toast</a></li>
               </ul>
             </li>
 
@@ -88,11 +90,17 @@
         <!-- Cabeçalho -->
         <header class="content-header">
           <div class="subnav">
-            <a href="#" data-section="overview">Overview</a>
-            <a href="#" data-section="get-started">Get Started</a>
-            <a href="#" data-section="foundations">Foundations</a>
-            <a href="#" data-section="components">Components</a>
-            <a href="#" data-section="tokens">Tokens</a>
+            <a href="#" class="nav-link" data-section="overview">Overview</a>
+            <a href="#" class="nav-link" data-section="get-started"
+              >Get Started</a
+            >
+            <a href="#" class="nav-link" data-section="foundations"
+              >Foundations</a
+            >
+            <a href="#" class="nav-link" data-section="components"
+              >Components</a
+            >
+            <a href="#" class="nav-link" data-section="tokens">Tokens</a>
           </div>
 
           <div class="search-wrapper">

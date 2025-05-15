@@ -1,0 +1,10 @@
+/* FOUNDATIONS IMPORT */
+
+@import "/foundations/theme-acme-color.css";
+@import "/foundations/theme-acme-typography.css";
+@import "/foundations/theme-acme-spacing.css";
+@import "/foundations/theme-acme-radius.css";
+
+body {
+  background-color: red;
+}
